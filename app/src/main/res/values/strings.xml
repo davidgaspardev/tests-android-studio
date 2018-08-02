@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Testing Intent</string>
+    <string name="intent_for_web">Intent For Web</string>
 </resources>
