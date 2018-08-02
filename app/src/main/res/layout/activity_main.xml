@@ -25,6 +25,13 @@
         android:layout_margin="10dp"
         android:background="@android:color/darker_gray"/>
 
+    <EditText
+        android:id="@+id/intentForCameraName"
+        android:inputType="text"
+        android:hint="@string/intent_for_camera_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/intentForCamera"
         android:layout_width="match_parent"
