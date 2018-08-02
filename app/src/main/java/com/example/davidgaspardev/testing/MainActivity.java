@@ -38,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnCamera = (Button) findViewById(R.id.intentForCamera);
+        btnCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Testing CALLBACK", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
 }

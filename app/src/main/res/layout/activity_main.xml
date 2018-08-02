@@ -26,6 +26,7 @@
         android:background="@android:color/darker_gray"/>
 
     <Button
+        android:id="@+id/intentForCamera"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/intent_for_camera"/>
