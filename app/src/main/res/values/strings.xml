@@ -2,4 +2,5 @@
     <string name="app_name">Testing Intent</string>
     <string name="intent_for_web">Intent For Web</string>
     <string name="intent_for_web_hint">Address for browser</string>
+    <string name="intent_for_camera">Intent For Camera</string>
 </resources>
