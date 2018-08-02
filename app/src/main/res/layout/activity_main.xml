@@ -6,6 +6,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <EditText
+        android:inputType="textUri"
+        android:hint="@string/intent_for_web_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/intentForWeb"
         android:layout_width="match_parent"
