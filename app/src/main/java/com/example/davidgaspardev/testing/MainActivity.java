@@ -2,12 +2,16 @@ package com.example.davidgaspardev.testing;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,11 +42,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final EditText edtImg = (EditText) findViewById(R.id.intentForCameraName);
+
         Button btnCamera = (Button) findViewById(R.id.intentForCamera);
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Testing CALLBACK", Toast.LENGTH_SHORT).show();
+
+                if(!edtImg.getText().toString().isEmpty()) {
+
+                    Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Pictures/" + edtImg.getText().toString() + ".jpg"));
+                    startActivity(new Intent(MediaStore.ACTION_IMAGE_CAPTURE).putExtra(MediaStore.EXTRA_OUTPUT, uri));
+
+                    edtImg.setText(null);
+
+                }else{
+                    Toast.makeText(MainActivity.this, "Does not have the image name", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
